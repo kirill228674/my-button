@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Кнопка з анімацією</title>
+  <style>
+    #myButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+
+    #myButton:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <button id="myButton">Натисни мене</button>
+
+  <script>
+    const button = document.getElementById("myButton");
+
+    button.addEventListener("mousedown", () => {
+      button.style.transform = "scale(0.9)";
+    });
+
+    button.addEventListener("mouseup", () => {
+      button.style.transform = "scale(1)";
+    });
+
+    button.addEventListener("mouseleave", () => {
+      button.style.transform = "scale(1)";
+    });
+  </script>
+</body>
+</html>
+
